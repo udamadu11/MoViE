@@ -7,7 +7,7 @@ function MovieContainer(props) {
     const [data,setData] = useState([]);
     
     useEffect(async ()=>{
-        let result = await fetch(`http://www.omdbapi.com/?apikey=${APIKey}&s=movies`)
+        let result = await fetch(`http://localhost:3003/Search`)
         result = await result.json();
         setData(result);        
     },[]);

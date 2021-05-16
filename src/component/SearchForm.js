@@ -1,13 +1,9 @@
 import React,{ useState } from 'react';
 
-function SearchForm(props) {
+function SearchForm({keyword}) {
 
     const [search , setSearch] = useState('');
     
-    async function searchMovie() {
-        console.log(search);
-    }
-
     return (
         <div className="jumbotron jumbotron-fluid mt-5 text-center">
             <div className="container">
@@ -18,13 +14,9 @@ function SearchForm(props) {
                         type="text"
                         className="form-control"
                         name="search"
-                        value={search}
-                        onChange={(e)=>setSearch(e.target.value)}
+                        onChange={keyword}
                         placeholder="Search Movies , TV Series ..."
                     />
-                    <button type="submit" className="btn btn-primary btn-bg mt-3" onClick={searchMovie}>
-                        Search
-                    </button>
             </div>
         </div>
     );
