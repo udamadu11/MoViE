@@ -1,8 +1,6 @@
-import React,{ useState } from 'react';
+import React from 'react';
 
 function SearchForm({keyword}) {
-
-    const [search , setSearch] = useState('');
     
     return (
         <div className="jumbotron jumbotron-fluid mt-5 text-center">
